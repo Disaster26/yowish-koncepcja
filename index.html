@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Izolacje przemysłowe i konstrukcje stalowe Kraków | YOWISH</title>
-<meta name="description" content="Izolacje termiczne ciepło- i zimnochronne dla rafinerii, elektrowni i przemysłu, konstrukcje stalowe oraz wynajem personelu: izolerzy, spawacze, rusztowaniowcy. YOWISH, Kraków.">
+<title>Wentylacja mechaniczna, HVAC i konstrukcje stalowe Kraków | YOWISH</title>
+<meta name="description" content="Wentylacja mechaniczna, rekuperacja, wentylacja przemysłowa i klimatyzacja: projekt, montaż, uruchomienie i serwis instalacji HVAC. Montaż konstrukcji stalowych. YOWISH, Kraków.">
 <meta name="theme-color" content="#0d0f12">
 <link rel="icon" href="img/favicon-96.png" type="image/png">
-<link rel="preload" as="image" href="img/hero-m-760.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
-<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hvac-hero-m-760.webp" imagesrcset="img/hvac-hero-m-480.webp 480w, img/hvac-hero-m-760.webp 760w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hvac-hero-1600.webp" imagesrcset="img/hvac-hero-1024.webp 1024w, img/hvac-hero-1600.webp 1600w, img/hvac-hero-2200.webp 2200w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/saira-rdzen.woff2" crossorigin>
 <style>
 @font-face{font-family:Saira;font-weight:100 900;font-display:swap;src:url(fonts/saira-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
@@ -27,19 +27,25 @@ h1,h2,h3{font-family:Saira,"Arial Narrow",Arial,sans-serif;margin:0;font-weight:
 h2{font-size:clamp(32px,3.3vw,64px)}
 h3{font-size:clamp(21px,1.35vw,27px);font-weight:650;line-height:1.15}
 p{margin:0}
-ul{margin:0;padding:0;list-style:none}
+ul,ol{margin:0;padding:0;list-style:none}
 .wrap{width:var(--w);margin:0 auto}
 .skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;z-index:99;background:#fff;padding:8px 12px}
 /* scieta bryla z logo: dwa przeciwlegle narozniki */
 .ch{clip-path:polygon(var(--c) 0,100% 0,100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,0 100%,0 var(--c))}
-/* plaszcz izolacji: pas blachy z mostkami jak w szablonie liter logo */
-.band{height:7px;background:repeating-linear-gradient(90deg,var(--k) 0 86px,transparent 86px 96px)}
+/* strumien powietrza: pasy z mostkami jak w szablonie liter logo, plyna w prawo */
+.flow{position:relative;height:22px;overflow:hidden;--fc:var(--k)}
+.flow::before{content:"";position:absolute;top:0;left:-200px;right:-200px;height:100%;background:
+ repeating-linear-gradient(90deg,var(--fc) 0 86px,transparent 86px 100px) 0 0/100% 4px repeat-x,
+ repeating-linear-gradient(90deg,transparent 0 30px,var(--fc) 30px 150px,transparent 150px 200px) 0 9px/100% 4px repeat-x,
+ repeating-linear-gradient(90deg,transparent 0 60px,var(--fc) 60px 120px,transparent 120px 200px) 0 18px/100% 4px repeat-x;
+ opacity:.9;animation:flow 9s linear infinite;will-change:transform}
+@keyframes flow{to{transform:translateX(200px)}}
+@media (prefers-reduced-motion:reduce){.flow::before{animation:none}}
 .h2band{display:block;width:clamp(150px,14vw,250px);height:7px;margin-top:22px;background:linear-gradient(90deg,var(--red) 0 38%,transparent 38% calc(38% + 9px),var(--k) calc(38% + 9px) 100%)}
 .dark .h2band{background:linear-gradient(90deg,var(--red) 0 38%,transparent 38% calc(38% + 9px),#fff calc(38% + 9px) 100%)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 34px;background:var(--red);color:#fff;font:650 1.06rem/1 Saira,Arial,sans-serif;letter-spacing:.01em;text-decoration:none;border:0;cursor:pointer;--c:14px;clip-path:polygon(var(--c) 0,100% 0,100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,0 100%,0 var(--c));transition:background .2s}
 .btn:hover{background:var(--red2)}
 .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.btn svg{width:18px;height:18px}
 
 /* naglowek */
 .top{position:fixed;inset:0 0 auto;z-index:50;height:var(--hh);transition:background .25s,box-shadow .25s}
@@ -67,17 +73,17 @@ ul{margin:0;padding:0;list-style:none}
 /* pierwszy ekran */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:var(--k);overflow:hidden}
 .hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero picture img{object-position:50% 40%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,15,18,.55) 0,rgba(13,15,18,.08) 22%,rgba(13,15,18,.2) 45%,rgba(13,15,18,.86) 100%)}
-.hero .wrap{position:relative;z-index:2;padding:calc(var(--hh) + 40px) 0 34px}
-.hero h1{font-size:clamp(35px,5.2vw,98px);max-width:15ch;font-weight:700;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero picture img{object-position:50% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,15,18,.6) 0,rgba(13,15,18,.12) 22%,rgba(13,15,18,.3) 45%,rgba(13,15,18,.9) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:calc(var(--hh) + 40px) 0 30px}
+.hero h1{font-size:clamp(35px,5.2vw,98px);max-width:14ch;font-weight:700;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .hero h1 span{display:block;font-weight:500;font-size:.62em;margin-top:.3em;max-width:22ch}
-.hero .lead{max-width:44ch;margin-top:20px;font-size:clamp(16px,.5vw + 14px,21px);color:#e9edf1}
+.hero .lead{max-width:46ch;margin-top:20px;font-size:clamp(16px,.5vw + 14px,21px);color:#e9edf1}
 .hero .row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:28px}
 .hero .ph{color:#fff;font:600 1.12rem/1.2 Saira,Arial,sans-serif;text-decoration:none}
 .hero .ph small{display:block;font:400 .82rem/1.3 Inter,Arial,sans-serif;color:#c9d0d7}
-.hero .band{position:relative;z-index:2;background:repeating-linear-gradient(90deg,#fff 0 86px,transparent 86px 96px);opacity:.9}
-@media (min-width:761px){.hero picture img{object-position:50% 50%}.hero .wrap{padding-bottom:64px}.hero::after{background:linear-gradient(90deg,rgba(13,15,18,.78) 0,rgba(13,15,18,.35) 48%,rgba(13,15,18,.05) 75%),linear-gradient(180deg,rgba(13,15,18,.5) 0,transparent 20%)}}
+.hero .flow{z-index:2;--fc:#fff;margin-bottom:4px}
+@media (min-width:761px){.hero picture img{object-position:50% 50%}.hero .wrap{padding-bottom:60px}.hero::after{background:linear-gradient(90deg,rgba(13,15,18,.84) 0,rgba(13,15,18,.5) 45%,rgba(13,15,18,.08) 78%),linear-gradient(180deg,rgba(13,15,18,.5) 0,transparent 20%)}}
 
 section{padding:clamp(64px,8vw,140px) 0}
 .grey{background:var(--al)}
@@ -85,88 +91,80 @@ section{padding:clamp(64px,8vw,140px) 0}
 .lead2{max-width:62ch;margin-top:22px;color:var(--mut);font-size:clamp(17px,.4vw + 15px,21px)}
 .dark .lead2{color:#c4ccd4}
 
-/* trzy dzialy */
-.dzialy{display:grid;grid-auto-flow:column;grid-auto-columns:84%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:44px;padding-bottom:6px;scrollbar-width:none;cursor:grab}
+/* czym sie zajmujemy */
+.dzialy{display:grid;grid-auto-flow:column;grid-auto-columns:82%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:44px;padding-bottom:6px;scrollbar-width:none;cursor:grab}
 .dzialy::-webkit-scrollbar{display:none}
 .dzial{scroll-snap-align:start;display:flex;flex-direction:column;text-decoration:none;background:var(--al)}
 .dzial figure{margin:0;aspect-ratio:4/3;overflow:hidden}
 .dzial img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .dzial:hover img{transform:scale(1.04)}
-.dzial div{padding:24px 24px 28px;border-top:7px solid var(--k)}
+.dzial div{flex:1;padding:24px 24px 28px;border-top:7px solid var(--k)}
 .dzial:hover div{border-top-color:var(--red)}
 .dzial p{margin-top:10px;color:var(--mut)}
-@media (min-width:900px){.dzialy{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible;cursor:auto}}
+.dzial.st div{border-top-color:var(--red)}
+@media (min-width:700px){.dzialy{grid-auto-columns:46%}}
+@media (min-width:1200px){.dzialy{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;cursor:auto}}
 
-/* izolacje */
-.iz{display:grid;gap:22px;margin-top:48px}
-.izk{background:#fff;display:grid}
-.izk figure{margin:0;aspect-ratio:3/2;overflow:hidden}
-.izk img{width:100%;height:100%;object-fit:cover}
-.izk .t{padding:26px 24px 30px}
-.izk .t p{margin-top:12px;color:var(--mut)}
-.izk .temp{display:flex;align-items:center;gap:10px;margin-top:16px;font:600 .95rem/1 Saira,Arial,sans-serif}
-.izk .temp i{display:block;width:44px;height:7px;background:var(--red)}
-.izk.cold .temp i{background:#1f5fa8}
-@media (min-width:900px){.iz{grid-template-columns:1fr 1fr;gap:28px}}
-.mat{display:grid;gap:34px;margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
-.mat h3{font-size:clamp(19px,1.1vw,23px)}
-.mat ul{margin-top:14px}
-.mat li{padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline}
-.mat li::before{content:"";flex:none;width:10px;height:10px;background:var(--k);clip-path:polygon(35% 0,100% 0,100% 65%,65% 100%,0 100%,0 35%);transform:translateY(1px)}
-@media (min-width:900px){.mat{grid-template-columns:repeat(3,1fr);gap:48px}}
+/* hvac: od projektu po serwis */
+.hv{display:grid;gap:40px;margin-top:48px}
+.hv figure{margin:0;overflow:hidden;aspect-ratio:3/2}
+.hv figure img{width:100%;height:100%;object-fit:cover}
+.kroki{counter-reset:k;display:grid;gap:0}
+.kroki li{position:relative;padding:0 0 30px 52px}
+.kroki li::before{counter-increment:k;content:"0" counter(k);position:absolute;left:0;top:-2px;font:700 1.25rem/1 Saira,Arial,sans-serif;color:var(--red)}
+.kroki li::after{content:"";position:absolute;left:12px;top:30px;bottom:6px;width:4px;background:repeating-linear-gradient(180deg,var(--k) 0 26px,transparent 26px 34px)}
+.kroki li:last-child::after{display:none}
+.kroki h3{font-size:clamp(21px,1.35vw,27px)}
+.kroki p{margin-top:8px;color:var(--mut)}
+@media (min-width:1000px){.hv{grid-template-columns:1fr 1fr;gap:72px;align-items:start}.hv figure{aspect-ratio:auto;height:100%;min-height:520px}}
+.zak{display:grid;gap:34px;margin-top:56px;padding-top:44px;border-top:1px solid var(--line)}
+.zak h3{font-size:clamp(19px,1.1vw,23px)}
+.zak ul{margin-top:14px}
+.zak li{padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:baseline}
+.zak li::before{content:"";flex:none;width:10px;height:10px;background:var(--k);clip-path:polygon(35% 0,100% 0,100% 65%,65% 100%,0 100%,0 35%);transform:translateY(1px)}
+@media (min-width:900px){.zak{grid-template-columns:repeat(3,1fr);gap:48px}}
 
-/* branze */
+/* dla kogo */
 .br{display:grid;grid-template-columns:1fr;margin-top:44px;border-top:7px solid var(--k)}
 .br li{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);font:600 clamp(21px,1.6vw,32px)/1.15 Saira,Arial,sans-serif}
-.br li small{font:400 .95rem/1.4 Inter,Arial,sans-serif;color:var(--mut);text-align:right;max-width:26ch}
+.br li small{font:400 .95rem/1.4 Inter,Arial,sans-serif;color:var(--mut);text-align:right;max-width:30ch}
 @media (min-width:900px){.br{grid-template-columns:1fr 1fr;column-gap:64px}}
-.norm{margin-top:34px;color:var(--mut);max-width:70ch}
-.norm b{color:var(--k)}
 
-/* projekt */
-.proj{display:grid;gap:40px}
-.proj .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:26px;font:600 1.05rem/1.3 Saira,Arial,sans-serif;color:#fff}
-.proj .meta span{display:flex;align-items:center;gap:10px}
-.proj .meta span::before{content:"";width:22px;height:7px;background:var(--red)}
-.proj ul.pk{margin-top:28px}
-.proj ul.pk li{padding:12px 0;border-bottom:1px solid #2b3139;color:#d8dee4}
-.list{display:grid;grid-template-columns:110px 1fr;gap:18px;align-items:center;margin-top:30px;padding:16px;background:var(--k2);text-decoration:none}
-.list img{width:110px;aspect-ratio:786/1024;object-fit:cover}
-.list b{font:600 1.1rem/1.2 Saira,Arial,sans-serif;display:block}
-.list span{color:#aeb7c0;font-size:.95rem}
+/* konstrukcje stalowe */
+.st2{display:grid;gap:40px}
+.st2 ul.pk{margin-top:28px}
+.st2 ul.pk li{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid #2b3139;color:#d8dee4}
+.st2 ul.pk li::before{content:"";flex:none;width:22px;height:7px;background:var(--red);transform:translateY(-3px)}
+.stf{margin:0 0 0;aspect-ratio:3/2;overflow:hidden}.stf img{width:100%;height:100%;object-fit:cover}
+.st2 .razem{margin-top:30px;padding:22px 24px;background:var(--k2);border-left:7px solid var(--red);color:#d8dee4}
+.st2 .razem b{display:block;color:#fff;font:600 1.15rem/1.3 Saira,Arial,sans-serif;margin-bottom:6px}
+@media (min-width:1100px){.st2{grid-template-columns:1fr 1fr;gap:80px;align-items:start}}
 .gal{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;margin-top:48px}
 .gal::-webkit-scrollbar{display:none}
-.gal button{scroll-snap-align:start;margin:0;padding:0;border:0;background:#222;cursor:zoom-in;aspect-ratio:3/4;overflow:hidden}
-.gal button.w{aspect-ratio:auto}
+.gal button{scroll-snap-align:start;margin:0;padding:0;border:0;background:#222;cursor:zoom-in;aspect-ratio:4/3;overflow:hidden}
 .gal img{width:100%;height:100%;object-fit:cover;pointer-events:none}
 .galnav{display:flex;gap:10px;margin-top:18px}
-.galnav button{width:52px;height:52px;border:2px solid #fff;background:none;color:#fff;cursor:pointer;font-size:22px;line-height:1}
-.galnav button:hover{background:#fff;color:var(--k)}
+.galnav button{width:52px;height:52px;border:2px solid currentColor;background:none;color:inherit;cursor:pointer;font-size:22px;line-height:1}
+.dark .galnav button:hover{background:#fff;color:var(--k)}
+.grey .galnav button:hover{background:var(--k);color:#fff}
 @media (min-width:700px){.gal{grid-auto-columns:42%}}
-@media (min-width:1100px){.proj{grid-template-columns:1fr 1fr;gap:80px;align-items:start}.gal{grid-auto-columns:calc((100% - 42px)/4)}}
+@media (min-width:1100px){.gal{grid-auto-columns:calc((100% - 42px)/4)}.gal.g3{grid-auto-columns:calc((100% - 28px)/3)}}
 .lb{position:fixed;inset:0;z-index:90;background:rgba(8,9,11,.94);display:none;align-items:center;justify-content:center;padding:16px}
 .lb.open{display:flex}
 .lb img{max-width:100%;max-height:88vh;width:auto;object-fit:contain}
 .lb button{position:absolute;top:12px;right:12px;width:52px;height:52px;background:#fff;border:0;font-size:26px;cursor:pointer}
 
-/* personel */
-.pers{display:grid;gap:40px;align-items:start}
-.role{border-top:7px solid var(--k)}
-.role li{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font:650 clamp(26px,2.4vw,46px)/1.05 Saira,Arial,sans-serif}
-.role li::after{content:"";flex:none;width:clamp(28px,2.4vw,44px);height:7px;background:repeating-linear-gradient(90deg,var(--red) 0 60%,transparent 60% 70%,var(--red) 70% 100%)}
-.pers p+p{margin-top:16px}
-@media (min-width:1000px){.pers{grid-template-columns:5fr 6fr;gap:90px}}
-
-/* budownictwo */
-.bud{display:grid;gap:22px;margin-top:48px}
-.bk{background:#fff}
-.bk figure{margin:0;aspect-ratio:16/10;overflow:hidden}
-.bk img{width:100%;height:100%;object-fit:cover}
-.bk .t{padding:26px 24px 30px}
-.bk ul{margin-top:12px;color:var(--mut)}
-.bk li{padding:6px 0}
-.bk li::before{content:"";display:inline-block;width:14px;height:4px;background:var(--red);margin-right:12px;transform:translateY(-4px)}
-@media (min-width:900px){.bud{grid-template-columns:1fr 1fr;gap:28px}.bk.big figure{aspect-ratio:16/11}.bk:not(.big):not(.txt) figure{aspect-ratio:auto;height:calc(100% - 190px);min-height:300px}.bk.txt{grid-column:1/-1}.bk.txt .t{display:flex;flex-wrap:wrap;align-items:center;gap:16px 48px}.bk.txt ul{display:flex;flex-wrap:wrap;gap:4px 32px;margin:0}.bk.txt .t p{margin:0 0 0 auto!important}}
+/* doswiadczenie */
+.dos{display:grid;gap:40px}
+.dos .meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:22px;font:600 1.05rem/1.3 Saira,Arial,sans-serif}
+.dos .meta span{display:flex;align-items:center;gap:10px}
+.dos .meta span::before{content:"";width:22px;height:7px;background:var(--red)}
+.list{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;margin-top:28px;padding:14px;background:#fff;text-decoration:none}
+.list img{width:96px;aspect-ratio:786/1024;object-fit:cover}
+.list b{font:600 1.1rem/1.2 Saira,Arial,sans-serif;display:block}
+.list span{color:var(--mut);font-size:.95rem}
+@media (min-width:1100px){.dos{grid-template-columns:1fr 1fr;gap:80px;align-items:start}}
+.dos .gal button{aspect-ratio:3/4}
 
 /* kontakt */
 .kont{display:grid;gap:44px}
@@ -188,7 +186,8 @@ section{padding:clamp(64px,8vw,140px) 0}
 @media (min-width:1000px){.kont{grid-template-columns:1fr 1.1fr;gap:90px}.f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
 
 /* stopka */
-.foot{background:#fff;border-top:7px solid var(--k);padding:44px 0 26px;font-size:.95rem;color:var(--mut)}
+.foot{background:#fff;padding:0 0 26px;font-size:.95rem;color:var(--mut)}
+.foot .flow{margin-bottom:40px}
 .foot .g{display:grid;grid-template-columns:1fr 1fr;gap:28px 20px}
 .foot .lg{grid-column:1/-1}
 .foot .lg img{width:170px}
@@ -212,20 +211,18 @@ section{padding:clamp(64px,8vw,140px) 0}
 
 
 .wylinka-badge span{white-space:nowrap}
-.bk.txt{display:flex;flex-direction:column;justify-content:flex-end;background:#fff}
-.bk.txt .t{padding:30px 24px}
 </style>
 </head>
 <body>
 <a class="skip" href="#tresc">Przejdź do treści</a>
 <header class="top" id="top">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="YOWISH - strona główna"><img class="lw" src="img/logo-w.png" width="520" height="142" alt="YOWISH"><img class="lk" src="img/logo-k.png" width="520" height="142" alt="YOWISH"></a>
+    <a class="logo" href="#" aria-label="YOWISH - strona główna"><img class="lw" src="img/logo-w.webp" srcset="img/logo-w-280.webp 280w, img/logo-w.webp 400w" sizes="(min-width:761px) 200px, 150px" width="400" height="109" alt="YOWISH"><img class="lk" src="img/logo-k.webp" srcset="img/logo-k-280.webp 280w, img/logo-k.webp 400w" sizes="(min-width:761px) 200px, 150px" width="400" height="109" alt="YOWISH"></a>
     <nav class="nav" aria-label="Menu główne">
-      <a href="#izolacje">Izolacje</a>
-      <a href="#projekty">Projekty</a>
-      <a href="#personel">Personel</a>
-      <a href="#budownictwo">Budownictwo</a>
+      <a href="#hvac">Wentylacja i HVAC</a>
+      <a href="#dla-kogo">Dla kogo</a>
+      <a href="#konstrukcje">Konstrukcje stalowe</a>
+      <a href="#doswiadczenie">Doświadczenie</a>
       <a href="#kontakt">Kontakt</a>
       <a class="tel" href="tel:+48607615696"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="bevel" aria-hidden="true"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4l-2 2C10 21 3 14 3 5z"/></svg>607 615 696</a>
     </nav>
@@ -233,10 +230,10 @@ section{padding:clamp(64px,8vw,140px) 0}
   </div>
 </header>
 <nav class="mnav" id="mnav" aria-label="Menu mobilne">
-  <a href="#izolacje">Izolacje</a>
-  <a href="#projekty">Projekty</a>
-  <a href="#personel">Personel</a>
-  <a href="#budownictwo">Budownictwo</a>
+  <a href="#hvac">Wentylacja i HVAC</a>
+  <a href="#dla-kogo">Dla kogo</a>
+  <a href="#konstrukcje">Konstrukcje stalowe</a>
+  <a href="#doswiadczenie">Doświadczenie</a>
   <a href="#kontakt">Kontakt</a>
   <a class="btn" href="tel:+48607615696">Zadzwoń: 607 615 696</a>
 </nav>
@@ -244,159 +241,144 @@ section{padding:clamp(64px,8vw,140px) 0}
 <main id="tresc">
 <section class="hero" style="padding:0">
   <picture>
-    <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" sizes="100vw">
-    <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2200.webp 2200w" sizes="100vw" width="2200" height="1316" alt="Instalacja przemysłowa z rurociągami w płaszczach izolacyjnych z blachy aluminiowej" fetchpriority="high">
+    <source media="(max-width:760px)" srcset="img/hvac-hero-m-480.webp 480w, img/hvac-hero-m-760.webp 760w" sizes="100vw">
+    <img src="img/hvac-hero-1600.webp" srcset="img/hvac-hero-1024.webp 1024w, img/hvac-hero-1600.webp 1600w, img/hvac-hero-2200.webp 2200w" sizes="100vw" width="2200" height="1636" alt="Okrągłe kanały wentylacyjne ze stali ocynkowanej prowadzone wzdłuż elewacji budynku" fetchpriority="high">
   </picture>
   <div class="wrap">
-    <h1>Izolacje przemysłowe i konstrukcje stalowe<span>Ciepło zostaje w instalacji. Zimno też.</span></h1>
-    <p class="lead">Izolacje ciepło- i zimnochronne dla rafinerii, elektrowni i zakładów przemysłowych, konstrukcje stalowe i doświadczeni ludzie na budowę. Od 2008 roku, z bazą w Krakowie.</p>
+    <h1>Wentylacja mechaniczna i instalacje HVAC<span>Powietrze płynie tam, gdzie powinno.</span></h1>
+    <p class="lead">Projekt, montaż, uruchomienie i serwis wentylacji, rekuperacji i klimatyzacji. Do tego montaż konstrukcji stalowych. Baza w Krakowie.</p>
     <div class="row">
       <a class="btn" href="#kontakt">Zapytaj o wycenę</a>
       <a class="ph" href="tel:+48607615696"><small>Zadzwoń</small>+48 607 615 696</a>
     </div>
   </div>
-  <div class="band" aria-hidden="true"></div>
+  <div class="flow" aria-hidden="true"></div>
 </section>
 
 <section id="oferta">
   <div class="wrap">
-    <h2>Izolacje, ludzie i stal</h2>
+    <h2>Powietrze i stal</h2>
     <span class="h2band" aria-hidden="true"></span>
-    <p class="lead2">Obsługujemy przemysł ciężki i klientów indywidualnych. Działamy w trzech obszarach, więc jedną firmą można załatwić izolację instalacji, ekipę do prac i konstrukcję stalową.</p>
+    <p class="lead2">Głównym filarem jest kompleksowe wykonanie instalacji HVAC, od wentylacji w domu po instalacje w halach i obiektach komercyjnych. Drugą gałęzią jest montaż konstrukcji stalowych, także tych, na których instalacja potem stoi.</p>
     <div class="dzialy" data-drag>
-      <a class="dzial ch" href="#izolacje">
-        <figure><img src="img/cieplo-600.webp" srcset="img/cieplo-600.webp 600w, img/cieplo-1000.webp 1000w" sizes="(min-width:900px) 31vw, 84vw" width="1000" height="667" alt="Montaż izolacji z wełny mineralnej na dużym zbiorniku" loading="lazy" decoding="async"></figure>
-        <div><h3>Izolacje termiczne</h3><p>Ciepłochronne, zimnochronne, akustyczne i kriogeniczne, instalacje wentylacyjne, fasady z rdzeniem izolacyjnym.</p></div>
+      <a class="dzial ch" href="#hvac">
+        <figure><img src="img/rekuperacja-600.webp" srcset="img/rekuperacja-600.webp 600w, img/rekuperacja-1000.webp 1000w" sizes="(min-width:1200px) 23vw, (min-width:700px) 46vw, 82vw" width="1000" height="666" alt="Okrągły nawiewnik wentylacji mechanicznej z kanałem pod sufitem" loading="lazy" decoding="async"></figure>
+        <div><h3>Wentylacja mechaniczna i rekuperacja</h3><p>Stała wymiana powietrza z odzyskiem ciepła w domach, biurach i lokalach.</p></div>
       </a>
-      <a class="dzial ch" href="#personel">
-        <figure><img src="img/rura-500.webp" srcset="img/rura-500.webp 500w, img/rura-900.webp 900w" sizes="(min-width:900px) 31vw, 84vw" width="900" height="1504" alt="Rurociąg w aluminiowym płaszczu izolacyjnym na instalacji" loading="lazy" decoding="async" style="object-position:50% 30%"></figure>
-        <div><h3>Wynajem personelu</h3><p>Izolerzy, spawacze, rusztowaniowcy, monterzy rurociągów i budowlańcy do prac w kraju i za granicą.</p></div>
+      <a class="dzial ch" href="#hvac">
+        <figure><img src="img/kanaly-600.webp" srcset="img/kanaly-600.webp 600w, img/kanaly-1000.webp 1000w" sizes="(min-width:1200px) 23vw, (min-width:700px) 46vw, 82vw" width="1000" height="666" alt="Prostokątne kanały wentylacyjne na dachu budynku" loading="lazy" decoding="async"></figure>
+        <div><h3>Wentylacja przemysłowa i komercyjna</h3><p>Instalacje dla hal, magazynów, zakładów i obiektów usługowych.</p></div>
       </a>
-      <a class="dzial ch" href="#budownictwo">
-        <figure><img src="img/hala-600.webp" srcset="img/hala-600.webp 600w, img/hala-876.webp 876w" sizes="(min-width:900px) 31vw, 84vw" width="876" height="505" alt="Konstrukcja stalowa hali w trakcie montażu" loading="lazy" decoding="async"></figure>
-        <div><h3>Budownictwo</h3><p>Konstrukcje stalowe z dostawą i montażem, stolarka, zabudowy g-k, carporty i zadaszenia, szalunki tracone.</p></div>
+      <a class="dzial ch" href="#hvac">
+        <figure><img src="img/klima-600.webp" srcset="img/klima-600.webp 600w, img/klima-1000.webp 1000w" sizes="(min-width:1200px) 23vw, (min-width:700px) 46vw, 82vw" width="1000" height="666" alt="Jednostki zewnętrzne klimatyzacji na ścianie budynku" loading="lazy" decoding="async"></figure>
+        <div><h3>Klimatyzacja</h3><p>Dobór, montaż i serwis klimatyzacji razem z wentylacją, jako jedna instalacja.</p></div>
+      </a>
+      <a class="dzial st ch" href="#konstrukcje">
+        <figure><img src="img/stal-rama-500.webp" srcset="img/stal-rama-500.webp 500w, img/stal-rama-640.webp 640w, img/stal-rama-900.webp 900w" sizes="(min-width:1200px) 23vw, (min-width:700px) 46vw, 82vw" width="900" height="1350" alt="Stalowa konstrukcja szkieletowa w trakcie montażu" loading="lazy" decoding="async" style="object-position:50% 40%"></figure>
+        <div><h3>Konstrukcje stalowe</h3><p>Montaż hal, antresol i konstrukcji wsporczych pod instalacje.</p></div>
       </a>
     </div>
   </div>
 </section>
 
-<section class="grey" id="izolacje">
+<section class="grey" id="hvac">
   <div class="wrap">
-    <h2>Izolacje termiczne na instalacjach przemysłowych</h2>
+    <h2>Instalacje HVAC od projektu po serwis</h2>
     <span class="h2band" aria-hidden="true"></span>
-    <p class="lead2">Kompleksowo wykonujemy izolacje ciepłochronne i zimnochronne rurociągów, zbiorników, zaworów i urządzeń. Dobór materiałów wspieramy obliczeniami, m.in. w programie Rockassist.</p>
-    <div class="iz">
-      <article class="izk ch">
-        <figure><img src="img/cieplo-600.webp" srcset="img/cieplo-600.webp 600w, img/cieplo-1000.webp 1000w" sizes="(min-width:900px) 45vw, 100vw" width="1000" height="667" alt="Izolacja ciepłochronna z wełny mineralnej na rusztowaniu" loading="lazy" decoding="async"></figure>
-        <div class="t"><h3>Izolacje ciepłochronne</h3><p>Ograniczają straty ciepła tam, gdzie pracują wysokie temperatury: w energetyce, przemyśle chemicznym, petrochemicznym i spożywczym. Mniejsze straty to niższe koszty pracy zakładu i bezpieczniejsze stanowiska.</p><div class="temp"><i></i>Ciepło zostaje w środku</div></div>
-      </article>
-      <article class="izk cold ch">
-        <figure><img src="img/zimno-600.webp" srcset="img/zimno-600.webp 600w, img/zimno-1000.webp 1000w" sizes="(min-width:900px) 45vw, 100vw" width="1000" height="667" alt="Izolacja zimnochronna z kauczuku na rurach instalacji chłodniczej" loading="lazy" decoding="async"></figure>
-        <div class="t"><h3>Izolacje zimnochronne i kriogeniczne</h3><p>Rurociągi, pojemniki i urządzenia technologiczne w niskich temperaturach, łącznie z izolacjami kriogenicznymi. Ostatnio przy instalacji skraplania gazu LNG Canada w Kitimat.</p><div class="temp"><i></i>Zimno też</div></div>
-      </article>
+    <p class="lead2">Jedna firma prowadzi instalację przez cały cykl. Dzięki temu ten, kto ją montował, wie też, jak ją uruchomić i serwisować.</p>
+    <div class="hv">
+      <ol class="kroki">
+        <li><h3>Projekt i dobór</h3><p>Ustalamy potrzeby obiektu, dobieramy urządzenia i prowadzimy trasy kanałów tak, żeby powietrze docierało tam, gdzie trzeba.</p></li>
+        <li><h3>Montaż</h3><p>Kanały, centrale wentylacyjne, rekuperatory, klimatyzacja i izolacja instalacji. Porządnie, zgodnie z projektem i terminem.</p></li>
+        <li><h3>Uruchomienie i regulacja</h3><p>Uruchamiamy instalację, regulujemy przepływy i sprawdzamy, czy całość pracuje tak, jak zaplanowano.</p></li>
+        <li><h3>Serwis</h3><p>Przeglądy, czyszczenie i wymiana filtrów, naprawy. Instalacja zostaje sprawna przez lata.</p></li>
+      </ol>
+      <figure class="ch"><img src="img/montaz-700.webp" srcset="img/montaz-700.webp 700w, img/montaz-760.webp 760w, img/montaz-1300.webp 1300w" sizes="(min-width:1000px) 44vw, 100vw" width="1300" height="866" alt="Montaż kanałów wentylacyjnych i jednostek klimatyzacji na dachu budynku" loading="lazy" decoding="async"></figure>
     </div>
-    <div class="mat">
-      <div><h3>Materiały izolacyjne</h3><ul><li>wełna mineralna i ceramiczna</li><li>poliuretan (PUR, PIR)</li><li>kauczuk syntetyczny</li><li>pianka szklana</li><li>mikroporowe i krzemionkowe, m.in. Cryogel Z, Pyrogel XT-E</li></ul></div>
-      <div><h3>Płaszcze ochronne z blachy</h3><ul><li>aluminiowej</li><li>ocynkowanej i powlekanej</li><li>alucynkowej</li><li>ze stali nierdzewnej</li><li>kwasoodpornej, przy agresywnym środowisku</li></ul></div>
-      <div><h3>Pozostałe prace</h3><ul><li>izolacje akustyczne</li><li>instalacje wentylacyjne</li><li>fasady z rdzeniem izolacyjnym</li><li>obudowy i skrzynki ze stali nierdzewnej</li><li>praca na rysunkach izometrycznych i P&amp;ID</li></ul></div>
+    <div class="zak">
+      <div><h3>Wentylacja</h3><ul><li>wentylacja mechaniczna z odzyskiem ciepła (rekuperacja)</li><li>wentylacja nawiewno-wywiewna</li><li>wentylacja hal i obiektów przemysłowych</li><li>kanały okrągłe i prostokątne</li></ul></div>
+      <div><h3>Klimatyzacja i chłodzenie</h3><ul><li>klimatyzacja w domach i biurach</li><li>klimatyzacja obiektów komercyjnych</li><li>łączenie klimatyzacji z wentylacją</li><li>izolacja rurociągów i kanałów</li></ul></div>
+      <div><h3>Opieka nad instalacją</h3><ul><li>uruchomienie i regulacja przepływów</li><li>przeglądy okresowe</li><li>czyszczenie i wymiana filtrów</li><li>naprawy i modernizacje</li></ul></div>
     </div>
   </div>
 </section>
 
-<section id="branze">
+<section id="dla-kogo">
   <div class="wrap">
-    <h2>Gdzie pracujemy</h2>
+    <h2>Dla kogo pracujemy</h2>
     <span class="h2band" aria-hidden="true"></span>
     <ul class="br">
-      <li>Rafinerie<small>ropa i gaz, petrochemia</small></li>
-      <li>Elektrownie i elektrociepłownie<small>energetyka</small></li>
-      <li>Przemysł chemiczny<small>instalacje procesowe</small></li>
-      <li>Hutnictwo<small>wysokie temperatury</small></li>
-      <li>Chłodnictwo i LNG<small>izolacje zimnochronne, kriogeniczne</small></li>
-      <li>Cement i wapno<small>piece, rurociągi</small></li>
-      <li>Przemysł papierniczy i spożywczy<small>linie technologiczne</small></li>
-      <li>Budowa statków<small>izolacje okrętowe</small></li>
+      <li>Domy jednorodzinne<small>rekuperacja, klimatyzacja</small></li>
+      <li>Biura i lokale usługowe<small>wentylacja i klimatyzacja</small></li>
+      <li>Hale i magazyny<small>wentylacja, konstrukcje stalowe</small></li>
+      <li>Zakłady przemysłowe<small>wentylacja przemysłowa, konstrukcje wsporcze</small></li>
+      <li>Obiekty komercyjne<small>kompleksowe instalacje HVAC</small></li>
+      <li>Generalni wykonawcy<small>instalacje i stal jako podwykonawca</small></li>
     </ul>
-    <p class="norm">Prace prowadzimy zgodnie z <b>Polskimi Normami, niemieckimi normami DIN, VDI i AGI</b> oraz standardami europejskimi, z naciskiem na bezpieczeństwo pracy (BHP i HSSE).</p>
   </div>
 </section>
 
-<section class="dark" id="projekty">
+<section class="dark" id="konstrukcje">
   <div class="wrap">
-    <div class="proj">
+    <div class="st2">
       <div>
-        <h2>LNG Canada, Kitimat</h2>
+        <h2>Montaż konstrukcji stalowych</h2>
         <span class="h2band" aria-hidden="true"></span>
-        <div class="meta"><span>XI 2024 - VII 2025</span><span>Kolumbia Brytyjska, Kanada</span></div>
+        <p class="lead2">Druga gałąź firmy. Montujemy konstrukcje stalowe dla obiektów przemysłowych, magazynowych i usługowych.</p>
         <ul class="pk">
-          <li>Nadzór i montaż izolacji zimnochronnej rurociągów, zbiorników, zaworów i kołnierzy.</li>
-          <li>Montaż obudów i skrzynek ze stali nierdzewnej.</li>
-          <li>Praca na rysunkach izometrycznych i schematach P&amp;ID, codzienne programy BHP (HSSE).</li>
-          <li>Pianka szklana, PIR, Cryogel Z, Pyrogel XT-E, SoundMat, wełna mineralna, włókno szklane.</li>
+          <li>Hale stalowe</li>
+          <li>Antresole i podesty technologiczne</li>
+          <li>Konstrukcje wsporcze pod instalacje: centrale, kanały, rurociągi</li>
+          <li>Schody i balustrady stalowe</li>
+          <li>Obudowa z blach trapezowych i płyt warstwowych</li>
         </ul>
       </div>
       <div>
-        <p class="lead2" style="margin-top:0">Zdjęcia z instalacji w Kitimat: rurociągi i zbiorniki w aluminiowych płaszczach, które montowaliśmy na miejscu.</p>
+        <figure class="stf ch"><img src="img/spawacz-700.webp" srcset="img/spawacz-700.webp 700w, img/spawacz-760.webp 760w, img/spawacz-1300.webp 1300w" sizes="(min-width:1100px) 44vw, 100vw" width="1300" height="866" alt="Spawanie stalowej konstrukcji na wysokości" loading="lazy" decoding="async"></figure>
+        <div class="razem"><b>Konstrukcja i instalacja w jednych rękach</b>Konstrukcja wsporcza pod centralę na dachu czy pomost pod kanały to zwykle osobne zlecenie. U nas stal i wentylację montuje jedna firma, więc wszystko do siebie pasuje od pierwszego dnia.</div>
+        <p style="margin-top:30px"><a class="btn" href="#kontakt">Zapytaj o konstrukcję</a></p>
+      </div>
+    </div>
+    <div class="gal g3" id="gal" data-drag>
+      <button data-lb="img/hala-876.webp" aria-label="Powiększ zdjęcie hali"><img src="img/hala-600.webp" width="876" height="505" alt="Konstrukcja stalowa hali w trakcie montażu" loading="lazy" decoding="async"></button>
+      <button data-lb="img/dach-stal-1000.webp" aria-label="Powiększ zdjęcie konstrukcji dachu"><img src="img/dach-stal-600.webp" width="600" height="400" alt="Stalowe belki konstrukcji dachu" loading="lazy" decoding="async"></button>
+      <button data-lb="img/stal-rama-900.webp" aria-label="Powiększ zdjęcie ramy stalowej"><img src="img/stal-rama-500.webp" width="500" height="750" alt="Szkielet stalowy budynku" loading="lazy" decoding="async"></button>
+    </div>
+    <div class="galnav"><button type="button" data-g="gal" data-d="-1" aria-label="Poprzednie zdjęcia">&larr;</button><button type="button" data-g="gal" data-d="1" aria-label="Następne zdjęcia">&rarr;</button></div>
+  </div>
+</section>
+
+<section class="grey" id="doswiadczenie">
+  <div class="wrap">
+    <div class="dos">
+      <div>
+        <h2>Doświadczenie z dużych instalacji</h2>
+        <span class="h2band" aria-hidden="true"></span>
+        <p class="lead2">Nasz zespół pracował przy instalacjach przemysłowych w kraju i za granicą. Ostatnio przy izolacji rurociągów, zbiorników i urządzeń w instalacji LNG Canada w Kitimat.</p>
+        <div class="meta"><span>LNG Canada, Kitimat</span><span>XI 2024 - VII 2025</span></div>
+      </div>
+      <div>
+        <p class="lead2" style="margin-top:0">Praca na rysunkach izometrycznych i schematach, codzienne programy bezpieczeństwa i nadzór nad montażem. To samo podejście stosujemy dziś przy instalacjach HVAC.</p>
         <a class="list" href="#" data-lb="img/list-786.webp"><img src="img/list-400.webp" width="400" height="521" alt="List referencyjny z projektu LNG Canada" loading="lazy" decoding="async"><div><b>List referencyjny z projektu</b><span>Kliknij, żeby powiększyć</span></div></a>
       </div>
     </div>
-    <div class="gal" id="gal" data-drag>
-      <button data-lb="img/instalacja-1300.webp" aria-label="Powiększ zdjęcie instalacji"><img src="img/instalacja-700.webp" width="700" height="419" alt="Moduły instalacji LNG z izolowanymi rurociągami" loading="lazy" decoding="async"></button>
-      <button data-lb="img/pion-900.webp" aria-label="Powiększ zdjęcie rurociągu"><img src="img/pion-500.webp" width="500" height="836" alt="Pionowy rurociąg w płaszczu aluminiowym" loading="lazy" decoding="async"></button>
-      <button data-lb="img/skid-1300.webp" aria-label="Powiększ zdjęcie modułu"><img src="img/skid-700.webp" width="700" height="419" alt="Moduł technologiczny z izolowanymi rurami i zaworami" loading="lazy" decoding="async"></button>
-      <button data-lb="img/zbiornik-900.webp" aria-label="Powiększ zdjęcie zbiornika"><img src="img/zbiornik-500.webp" width="500" height="836" alt="Zbiornik w płaszczu z blachy aluminiowej" loading="lazy" decoding="async"></button>
-      <button data-lb="img/rura-900.webp" aria-label="Powiększ zdjęcie kolana rurociągu"><img src="img/rura-500.webp" width="500" height="836" alt="Kolano rurociągu w płaszczu izolacyjnym" loading="lazy" decoding="async"></button>
+    <div class="gal" id="gal2" data-drag>
+      <button data-lb="img/instalacja-1300.webp" aria-label="Powiększ zdjęcie instalacji"><img src="img/instalacja-700.webp" width="700" height="419" alt="Moduły instalacji LNG w Kitimat" loading="lazy" decoding="async"></button>
+      <button data-lb="img/pion-900.webp" aria-label="Powiększ zdjęcie rurociągu"><img src="img/pion-500.webp" width="500" height="836" alt="Pionowy rurociąg w płaszczu aluminiowym, Kitimat" loading="lazy" decoding="async"></button>
+      <button data-lb="img/skid-1300.webp" aria-label="Powiększ zdjęcie modułu"><img src="img/skid-700.webp" width="700" height="419" alt="Moduł technologiczny z izolowanymi rurami, Kitimat" loading="lazy" decoding="async"></button>
+      <button data-lb="img/zbiornik-900.webp" aria-label="Powiększ zdjęcie zbiornika"><img src="img/zbiornik-500.webp" width="500" height="836" alt="Zbiornik w płaszczu z blachy aluminiowej, Kitimat" loading="lazy" decoding="async"></button>
+      <button data-lb="img/rura-900.webp" aria-label="Powiększ zdjęcie kolana rurociągu"><img src="img/rura-500.webp" width="500" height="836" alt="Kolano rurociągu w płaszczu izolacyjnym, Kitimat" loading="lazy" decoding="async"></button>
     </div>
-    <div class="galnav"><button type="button" data-g="-1" aria-label="Poprzednie zdjęcia">&larr;</button><button type="button" data-g="1" aria-label="Następne zdjęcia">&rarr;</button></div>
-  </div>
-</section>
-
-<section id="personel">
-  <div class="wrap pers">
-    <div>
-      <h2>Wynajem personelu</h2>
-      <span class="h2band" aria-hidden="true"></span>
-      <p class="lead2">Zespół, który zdobywał doświadczenie na dużych rafineriach i elektrociepłowniach. Kiedy na budowie brakuje rąk do pracy, dostarczamy wykwalifikowanych ludzi.</p>
-      <p class="lead2">Nie boimy się wyzwań terminowych, jakościowych ani zadań zaawansowanych technologicznie. Wszystkie prace prowadzimy w najwyższych standardach bezpieczeństwa.</p>
-      <p style="margin-top:30px"><a class="btn" href="#kontakt">Zapytaj o ekipę</a></p>
-    </div>
-    <ul class="role">
-      <li>Izolerzy</li>
-      <li>Spawacze</li>
-      <li>Rusztowaniowcy</li>
-      <li>Monterzy rurociągów</li>
-      <li>Budowlańcy</li>
-    </ul>
-  </div>
-</section>
-
-<section class="grey" id="budownictwo">
-  <div class="wrap">
-    <h2>Konstrukcje stalowe i budownictwo</h2>
-    <span class="h2band" aria-hidden="true"></span>
-    <p class="lead2">Od dokumentacji projektowej po montaż: konstrukcja stalowa, blachy trapezowe, płyty warstwowe ścienne i dachowe, schody i balustrady.</p>
-    <div class="bud">
-      <article class="bk big ch">
-        <figure><img src="img/hala-600.webp" srcset="img/hala-600.webp 600w, img/hala-876.webp 876w" sizes="(min-width:900px) 40vw, 100vw" width="876" height="505" alt="Montaż konstrukcji stalowej hali" loading="lazy" decoding="async"></figure>
-        <div class="t"><h3>Konstrukcje stalowe</h3><ul><li>projekt i dokumentacja techniczna</li><li>dostawa i montaż konstrukcji</li><li>blachy trapezowe i płyty warstwowe</li><li>schody i balustrady stalowe</li></ul></div>
-      </article>
-      <article class="bk ch">
-        <figure><img src="img/carport-500.webp" srcset="img/carport-500.webp 500w, img/carport-864.webp 864w" sizes="(min-width:900px) 28vw, 100vw" width="864" height="864" alt="Aluminiowe zadaszenie tarasu ze szkłem" loading="lazy" decoding="async"></figure>
-        <div class="t"><h3>Carporty i zadaszenia</h3><ul><li>wiaty samochodowe z aluminium</li><li>zadaszenia i zabudowy tarasu</li></ul></div>
-      </article>
-      <article class="bk txt ch">
-        <div class="t"><h3>Prace wykończeniowe</h3><ul><li>drzwi, okna, bramy i rolety</li><li>zabudowy g-k i malowanie</li><li>szalunki tracone</li></ul><p style="margin-top:22px"><a class="btn" href="#kontakt">Zapytaj o termin</a></p></div>
-      </article>
-    </div>
+    <div class="galnav"><button type="button" data-g="gal2" data-d="-1" aria-label="Poprzednie zdjęcia">&larr;</button><button type="button" data-g="gal2" data-d="1" aria-label="Następne zdjęcia">&rarr;</button></div>
   </div>
 </section>
 
 <section id="kontakt">
   <div class="wrap kont">
     <div>
-      <h2>Porozmawiajmy o Państwa instalacji</h2>
+      <h2>Porozmawiajmy o Państwa obiekcie</h2>
       <span class="h2band" aria-hidden="true"></span>
-      <p class="lead2">Prosimy opisać obiekt i zakres prac. Odpowiadamy z wyceną albo pytaniami o szczegóły.</p>
+      <p class="lead2">Prosimy krótko opisać obiekt i zakres prac. Odpowiadamy z wyceną albo pytaniami o szczegóły.</p>
       <div class="dane">
         <div><small>Telefon</small><a href="tel:+48607615696">+48 607 615 696</a><br><a href="tel:+48730626111">+48 730 626 111</a></div>
         <div><small>E-mail</small><a href="mailto:biuro@yowish.pl">biuro@yowish.pl</a></div>
@@ -414,8 +396,8 @@ section{padding:clamp(64px,8vw,140px) 0}
         <label>Telefon<input name="t" type="tel" autocomplete="tel"></label>
         <label>E-mail<input name="e" type="email" autocomplete="email"></label>
       </div>
-      <label>Zakres prac<select name="z"><option>Izolacje termiczne</option><option>Wynajem personelu</option><option>Konstrukcje stalowe</option><option>Inne prace budowlane</option></select></label>
-      <label>Opis obiektu i prac<textarea name="o" placeholder="Np. izolacja zimnochronna rurociągów, ok. 300 m, termin od marca"></textarea></label>
+      <label>Zakres prac<select name="z"><option>Wentylacja mechaniczna / rekuperacja</option><option>Wentylacja przemysłowa lub komercyjna</option><option>Klimatyzacja</option><option>Serwis instalacji</option><option>Konstrukcje stalowe</option><option>Inne</option></select></label>
+      <label>Opis obiektu i prac<textarea name="o" placeholder="Np. hala magazynowa, wentylacja i konstrukcja pod centralę na dachu, termin od marca"></textarea></label>
       <button class="btn" type="submit">Wyślij zapytanie</button>
       <p class="ok" role="status">To podgląd strony, formularz jest pokazowy. Na docelowej stronie zapytanie trafi na biuro@yowish.pl.</p>
     </form>
@@ -424,11 +406,12 @@ section{padding:clamp(64px,8vw,140px) 0}
 </main>
 
 <footer class="foot">
+  <div class="flow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="g">
-      <div class="lg"><img src="img/logo-k.png" width="520" height="142" alt="YOWISH" loading="lazy"><p style="margin-top:14px;max-width:34ch">Izolacje przemysłowe, konstrukcje stalowe i wynajem personelu. Kraków.</p></div>
-      <div><b>Oferta</b><ul><li><a href="#izolacje">Izolacje</a></li><li><a href="#personel">Personel</a></li><li><a href="#budownictwo">Budownictwo</a></li></ul></div>
-      <div><b>Firma</b><ul><li><a href="#projekty">Projekty</a></li><li><a href="#branze">Branże</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
+      <div class="lg"><img src="img/logo-k.webp" width="400" height="109" alt="YOWISH" loading="lazy"><p style="margin-top:14px;max-width:34ch">Wentylacja mechaniczna, instalacje HVAC i konstrukcje stalowe. Kraków.</p></div>
+      <div><b>Oferta</b><ul><li><a href="#hvac">Wentylacja i HVAC</a></li><li><a href="#hvac">Klimatyzacja</a></li><li><a href="#konstrukcje">Konstrukcje stalowe</a></li></ul></div>
+      <div><b>Firma</b><ul><li><a href="#doswiadczenie">Doświadczenie</a></li><li><a href="#dla-kogo">Dla kogo</a></li><li><a href="#kontakt">Kontakt</a></li></ul></div>
       <div><b>Kontakt</b><ul><li><a href="tel:+48607615696">607 615 696</a></li><li><a href="tel:+48730626111">730 626 111</a></li><li><a href="mailto:biuro@yowish.pl">biuro@yowish.pl</a></li></ul></div>
     </div>
     <div class="bot"><span>&copy; 2026 YOWISH, ul. Karola Darwina 62P, 31-589 Kraków</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=yowish.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
@@ -442,7 +425,7 @@ section{padding:clamp(64px,8vw,140px) 0}
 (function(){
 var top=document.getElementById('top'),b=document.getElementById('burger'),m=document.getElementById('mnav');
 function sc(){top.classList.toggle('on',scrollY>40||m.classList.contains('open'))}
-addEventListener('scroll',sc,{passive:true});sc();
+addEventListener('scroll',sc,{passive:true});requestAnimationFrame(sc);
 b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);sc()});
 m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false);sc()}});
 document.querySelectorAll('[data-drag]').forEach(function(el){
@@ -453,8 +436,7 @@ document.querySelectorAll('[data-drag]').forEach(function(el){
   el.addEventListener('click',function(e){if(mv>6){e.preventDefault();e.stopPropagation();mv=0}},true);
   el.addEventListener('dragstart',function(e){e.preventDefault()});
 });
-var g=document.getElementById('gal');
-document.querySelectorAll('[data-g]').forEach(function(x){x.addEventListener('click',function(){g.scrollBy({left:(+x.dataset.g)*g.clientWidth*.8,behavior:'smooth'})})});
+document.querySelectorAll('[data-g]').forEach(function(x){x.addEventListener('click',function(){var g=document.getElementById(x.dataset.g);g.scrollBy({left:(+x.dataset.d)*g.clientWidth*.8,behavior:'smooth'})})});
 var lb=document.getElementById('lb'),li=document.getElementById('lbi');
 document.querySelectorAll('[data-lb]').forEach(function(x){x.addEventListener('click',function(e){e.preventDefault();li.src=x.dataset.lb;li.alt=(x.querySelector('img')||{}).alt||'';lb.classList.add('open')})});
 function cl(){lb.classList.remove('open')}
