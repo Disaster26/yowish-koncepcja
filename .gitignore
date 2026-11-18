@@ -1,0 +1,6 @@
+src.html
+*.part
+build.py
+raw/
+_sheet.jpg
+zrzuty/
